@@ -19,3 +19,18 @@ Extract textual data from a PDF file.
 ### Extract element from table in PDF
 
 In some cases, it may be easier to find the elements and their neighbours instead of just parsing the text. In this example we find rows and columns from a table in a PDF document.
+
+## Web application for scanned invoices
+
+The repository also includes `invoice_webapp.py`, a small Flask application that
+accepts a scanned PDF invoice upload, runs OCR with Tesseract, and returns a CSV
+file with a few extracted values such as the invoice date and total amount.
+Run it locally with:
+
+```bash
+python invoice_webapp.py
+```
+
+After starting the app, open `http://localhost:5000` in your browser and upload
+an invoice PDF (A4 sized scans work best). The extracted values will be
+returned as a CSV file.
